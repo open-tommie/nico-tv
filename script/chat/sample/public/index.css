@@ -102,6 +102,37 @@ textarea:focus {
 	/*background-color: gray;*/
  	/*background: url(/img/bg.png);*/
 }
+div.chatArea {
+	float: left;
+	color: gray;
+ 	background: url(/img/bg.png);
+	width: 300px;
+}
+
+video#Video1 {
+	float: left;
+	display: block;
+}
+div#chatWindow {
+	color: gray;
+/* 	background: url(/img/bg.png);
+*/
+
+}
+textarea#taMessage {
+	float: left;
+	width: 300px;
+	height: 384px;
+}
+div#time {
+	clear:both;
+/*	float: left; */
+
+}
+#inputMessage {
+	width: 600px;
+}
+
 div.footer {
 	color: gray;
 	padding: 10px;

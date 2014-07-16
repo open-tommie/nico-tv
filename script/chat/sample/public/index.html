@@ -8,6 +8,9 @@
 	<title>暗黒TV</title>
 	<link rel="stylesheet" type="text/css" href="index.css" media="all">
 	<script type="text/javascript" src="/js/breadCrumb.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/main.js"></script>
+
 <!--
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -93,14 +96,23 @@
 <p id="breadCrumb">breadcrumb(navigation).</p>
 <br>
 
-<video id="Video1" poster="http://tv.tommie2.info/co1827022/image128x128.jpg" preload="none" controls="controls" autoplay="autoplay">
-<p class="warning">Your browser does not support HTML5 video.</p>
-</video>
+<div id="videChat">
+	<video id="Video1" poster="http://tv.tommie2.info/co1827022/image128x128.jpg" preload="none" controls="controls" autoplay="autoplay">
+	<p class="warning">Your browser does not support HTML5 video.</p>
+	</video>
+	<div class="chatArea">
+		<textarea id="taMessage"></textarea>
+	</div>
+</div>
 
 <br>
-<div> time <div id="currentTime" >00 </div>
+
+<div id="time"> time <div id="currentTime" >00 </div>
+
 </div>
-  
+<div id="chatWindow">
+  <input id="inputMessage" placeholder="Type here..."/>
+<div>
 
 <hr>
 <p>クローム、IEで動作確認しています。</p>
