@@ -1,0 +1,115 @@
+/*
+** $Id: index.css 252 2014-07-09 14:23:45Z tommie $
+**
+*/
+
+body {
+ 	background-color: #ffffff;
+ 	-webkit-tap-highlight-color:rgba(255,0,0,0.40);
+	-webkit-text-size-adjust: 100%;
+}
+p.author {
+	text-align: right;
+}
+
+table.main {
+	color: black; 
+	border-width: 0px; 
+	/*table-layout: fixed;*/
+	table-layout: auto;
+	border: solid 1px;
+	border-spacing: 0px;
+}
+caption {
+	caption-side: left;
+	text-align: left;
+}
+th {
+	border: solid 1px;
+	color: black;
+	border-collapse: collapse;
+	/*text-align: left;*/
+	vertical-align:top;
+	/*width: 50px;*/
+}
+td {
+	border: solid 1px;
+	color: black;
+	border-collapse: collapse;
+	text-align: left;
+	vertical-align:top;
+	/*width: auto;*/
+	padding: 2px 2px 2px 2px;
+}
+td:focus {
+	color: red;
+}
+td.scene {
+	width: 2em;
+}
+td.cut {
+	width: 2em;
+}
+td.pic {
+	width: 150px;
+	padding: 0px;
+	border: solid 3px;
+	/*border-color: white; */
+}
+td.act {
+	width: 10em;
+}
+td.voice {
+	width: 10em;
+}
+td.time {
+	width: 6em;
+}
+td.music {
+	width: 6em;
+}
+td.effect {
+	width: 6em;
+}
+
+p.copyright {
+	text-align: right;
+}
+textarea {
+	color: black;
+	width: 98%;
+/*	height: 98%;*/
+	height: 10em;
+	line-height: 1.5em;
+	padding: 2px;
+	border: solid 0px;
+	border-color: white; 
+/*	border-color: red; */
+	resize: none;
+/*	overflow-y:scroll; */
+/*	rows: 10;*/
+}
+textarea:hover {
+	background-color: aliceblue;
+	/*background-color: gray;*/
+ 	/*background: url(/img/bg.png);*/
+}
+textarea:focus {
+	padding: 0px;
+	border: solid 2px;
+	border-color: red; 
+	/*background-color: #EEFFEE ;*/
+	/*background-color: gray;*/
+ 	/*background: url(/img/bg.png);*/
+}
+div.footer {
+	color: gray;
+	padding: 10px;
+	border-radius: 15px;
+	border: solid 1px;
+	border-color: gray; 
+ 	background: url(/img/bg.png);
+
+}
+
+

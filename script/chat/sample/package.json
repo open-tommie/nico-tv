@@ -1,9 +1,9 @@
 {
-  "name": "socket.io-chat",
-  "version": "0.0.0",
-  "description": "A simple chat client using socket.io",
+  "name": "nico-tv",
+  "version": "0.0.1",
+  "description": "nico TV",
   "main": "app.js",
-  "author": "Grant Timmerman",
+  "author": "tommie_nico",
   "private": true,
   "license": "BSD",
   "dependencies": {

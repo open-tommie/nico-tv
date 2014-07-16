@@ -5,8 +5,10 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var port = process.env.PORT || 8000;
 
+console.log("main start");
+
 server.listen(port, function () {
-  console.log('Server listening at port %d', port);
+  console.log('port=%d', port);
 });
 
 // Routing
@@ -81,3 +83,5 @@ io.on('connection', function (socket) {
     }
   });
 });
+console.log("main end");
+

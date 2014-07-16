@@ -1,28 +1,116 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>Socket.IO Chat Example</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <ul class="pages">
-    <li class="chat page">
-      <div class="chatArea">
-        <ul class="messages"></ul>
-      </div>
-      <input class="inputMessage" placeholder="Type here..."/>
-    </li>
-    <li class="login page">
-      <div class="form">
-        <h3 class="title">What's your nickname?</h3>
-        <input class="usernameInput" type="text" maxlength="14" />
-      </div>
-    </li>
-  </ul>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<title>暗黒TV</title>
+	<link rel="stylesheet" type="text/css" href="index.css" media="all">
+	<script type="text/javascript" src="/js/breadCrumb.js"></script>
+<!--
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/main.js"></script>
+	  ga('create', 'UA-46713816-2', 'tommie2.info');
+	  ga('send', 'pageview');
+	</script>
+-->
+<script type="text/javascript">
+	function log( str) {
+		console.log( str);
+	}
+	function computeDuration(ms){
+		var h = String(Math.floor(ms / 3600000) + 100).substring(1);
+		var m = String(Math.floor((ms - h * 3600000)/60000)+ 100).substring(1);
+		var s = String(Math.round((ms - h * 3600000 - m * 60000)/1000)+ 100).substring(1);
+		return h+':'+m+':'+s;
+	}   
+	function init() {
+		log( "init()");
+		var video = document.getElementById("Video1");                                               
+		if (!video.canPlayType) {
+			log( "再生できない形式");
+			return;
+		}
+	        
+		// fail with message 
+		video.addEventListener("error", function(err) {
+			log(err);
+		}, true);
+		video.addEventListener("loadstart", function(err) {
+			log( "loadstart()"+err);
+		}, true);
+		video.addEventListener("loadedmetadata", function(err) {
+			log( "loadedmetadata()"+err);
+			log( "duration="+video.duration);
+			var diff = (new Date()).getTime() % (video.duration*1000|0);
+			log( "diff="+diff);
+			video.currentTime = diff/1000;	//sec
+			video.play();
+		}, true);
+		
+		video.src = "http://tv.tommie2.info/co1827022/watch-1404825242.mp4";
+/*****
+		video.src = "watch-1404825242.webm";
+		if (video.canPlayType) {
+			// CanPlayType returns maybe, probably, or an empty string.
+			//var playMsg = video.canPlayType('video/mp4; codecs="avc1.42E01E"');
+			var playMsg = video.canPlayType('video/mp4');
+			if ("" != playMsg) {
+				log( "mp4/H.264 is " + playMsg + " supported ");
+				video.src = "watch-1404825242.mp4";
+			}
+			playMsg = video.canPlayType('video/ogg; codecs="theora"');
+			if ("" != playMsg) {
+				log( "ogg is " + playMsg + " supported");
+			}
+			playMsg = video.canPlayType('video/webm; codecs="vp8, vorbis"');
+			if ("" != playMsg) {
+				log( "webm is " + playMsg + " supported");
+			}
+		}else {
+				log( "no video support");
+		}
+*********/
+		log( "video.src="+video.src);
+		video.load(); 
+		setInterval( function() {
+			var ct = video.currentTime;
+			//log( "current="+ct);
+			//log( "computeDuration="+computeDuration(ct));
+			$("#currentTime").text( computeDuration(ct*1000));			
+		},100);
+	}
+</script>
+
+</head>
+<body onload="init();">        
+
+<p id="breadCrumb">breadcrumb(navigation).</p>
+<br>
+
+<video id="Video1" poster="http://tv.tommie2.info/co1827022/image128x128.jpg" preload="none" controls="controls" autoplay="autoplay">
+<p class="warning">Your browser does not support HTML5 video.</p>
+</video>
+
+<br>
+<div> time <div id="currentTime" >00 </div>
+</div>
+  
+
+<hr>
+<p>クローム、IEで動作確認しています。</p>
+<p>Safari, FireFoxはまだ対応していません。</p>
+<br>
+<hr>
+<div class="footer">
+暗黒TV by <a href="https://twitter.com/tommie_nico">@tommie_nico</a> <a href="http://tommie2.info">Home</a><br>
+<br>
+$Id: index.html 252 2014-07-09 14:23:45Z tommie $<br>
+</div>
 </body>
 </html>
