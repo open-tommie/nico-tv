@@ -101,19 +101,23 @@
 	<p class="warning">Your browser does not support HTML5 video.</p>
 	</video>
 	<div class="chatArea">
-		<textarea id="taMessage"></textarea>
+		<textarea id="taMessage" readonly></textarea>
 	</div>
 </div>
 
 <br>
 
-<div id="time"> time <div id="currentTime" >00 </div>
+<div id="currentTime" >00:00:00</div>
+<br>
 
-</div>
 <div id="chatWindow">
-  <input id="inputMessage" placeholder="Type here..."/>
+  <input id="inputMessage" placeholder="ここにコメントを入力（ENTERで送信）" />
 <div>
 
+<div id="totalUserAll">同時接続数:</div><div id="totalUser" >0 </div>
+<br>
+
+<br>
 <hr>
 <p>クローム、IEで動作確認しています。</p>
 <p>Safari, FireFoxはまだ対応していません。</p>

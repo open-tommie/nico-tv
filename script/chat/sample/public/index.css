@@ -95,16 +95,18 @@ textarea:hover {
  	/*background: url(/img/bg.png);*/
 }
 textarea:focus {
+/****
+	border-color: red; 
 	padding: 0px;
 	border: solid 2px;
-	border-color: red; 
+****/
 	/*background-color: #EEFFEE ;*/
 	/*background-color: gray;*/
  	/*background: url(/img/bg.png);*/
 }
 div.chatArea {
 	float: left;
-	color: gray;
+	color: black;
  	background: url(/img/bg.png);
 	width: 300px;
 }
@@ -114,24 +116,40 @@ video#Video1 {
 	display: block;
 }
 div#chatWindow {
+/*
+ 	background: url(/img/bg.png);
 	color: gray;
-/* 	background: url(/img/bg.png);
 */
 
 }
-textarea#taMessage {
+#taMessage {
 	float: left;
 	width: 300px;
 	height: 384px;
+	border: 1px solid black;
 }
-div#time {
-	clear:both;
-/*	float: left; */
-
+#currentTime {
+	float: left;
 }
 #inputMessage {
-	width: 600px;
+	width: 500px;
+	font-size: 125%;
+	color: black;
+	border: 1px solid black;
 }
+
+#totalUserAll {
+	display: inline;
+	float: left;
+/*  	color: red;
+**/
+}
+
+#totalUser {
+	display: inline;
+	float: left;
+}
+
 
 div.footer {
 	color: gray;
