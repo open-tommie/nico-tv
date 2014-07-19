@@ -30,6 +30,7 @@
 
 <div id="videChat">
 	<video id="Video1" poster="http://tv.tommie2.info/co1827022/image128x128.jpg" preload="none" controls="controls" autoplay="none">
+	<source src="http://tv.tommie2.info/co1827022/watch-1404825242.mp4">
 	<p class="warning">Your browser does not support HTML5 video.</p>
 	</video>
 	<div class="chatArea">
