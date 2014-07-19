@@ -4,7 +4,7 @@
 //	This code is based on XXXX
 //
 //	Copyright (c) 2014 @tommie_nico
-//  $Id: index.js 2014-07-20 00:49:00+09:00 tommie $
+//  $Id: index.js 2014-07-20 01:58:15+09:00 tommie $
 //
 var util = require('util');
 var log4js = require('log4js');
@@ -61,11 +61,17 @@ function _debug_ip(msg, socket) {
 
 _debug("---------------------------------------------------------------");
 _debug("main start");
-_debug("Id=$Id: index.js 2014-07-20 00:49:00+09:00 tommie $");
+_debug("Id=$Id: index.js 2014-07-20 01:58:15+09:00 tommie $");
 
-server.listen(port, function() {
-	_debug('port=%d', port);
-});
+try {
+	server.listen(port, function() {
+		_debug('port=%d', port);
+	});
+}
+catch(e) {
+	_debug( "ERROR e="+e);
+	_debug( e.stack);
+}
 
 // Routing
 app.use(express.static(__dirname + '/public'));
@@ -109,13 +115,13 @@ io.on('connection', function(socket) {
 	function getCurrentTime() {
 		var duration = 60*20; // [sec], video duration
 		var diff = (new Date()).getTime() % (duration*1000|0);
-		_debug( "diff="+diff);
+//		_debug( "diff="+diff);
 		var currentTime = diff/1000;	//sec
-		_debug( "currentTime="+currentTime);
+//		_debug( "currentTime="+currentTime);
 		return currentTime;
 	}
 	function emitPlay( socket, p_url) {
-		_debug( "p_url="+p_url);
+//		_debug( "p_url="+p_url);
 		socket.emit('play', {
 			url		: p_url,
 			time	: getCurrentTime()
@@ -123,7 +129,7 @@ io.on('connection', function(socket) {
 	
 	}
 	function broadcastPlay( socket, p_url) {
-		_debug( "broadcastPlay() p_url="+p_url);
+//		_debug( "broadcastPlay() p_url="+p_url);
 		io.sockets.emit('play', {
 			url		: p_url,
 			time	: getCurrentTime()
@@ -149,7 +155,7 @@ io.on('connection', function(socket) {
 				"\n"+
 				"**********************\n"+
 				"暗黒TVへ、ようこそ!\n" +
-				"server=$Id: index.js 2014-07-20 00:49:00+09:00 tommie $\n"+
+				"server=$Id: index.js 2014-07-20 01:58:15+09:00 tommie $\n"+
 				"**********************\n",
 			time    : currentTimeStr()
 		});
@@ -184,7 +190,7 @@ io.on('connection', function(socket) {
 	clearInterval( g_timer1);
 	g_timer1 = setInterval( function() {
 		videoCount++;
-		_debug( "videoCount="+videoCount);
+//		_debug( "videoCount="+videoCount);
 		if ( (videoCount % 2) == 0) {
 			broadcastPlay( socket, "http://podcast.tommie2.info/movie/watch-sm23320645.mp4");
 		} else {
