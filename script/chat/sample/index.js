@@ -4,7 +4,7 @@
 //	This code is based on XXXX
 //
 //	Copyright (c) 2014 @tommie_nico
-//  $Id: index.js 2014-07-20 01:58:15+09:00 tommie $
+//  $Id: index.js 2014-07-20 02:28:42+09:00 tommie $
 //
 var util = require('util');
 var log4js = require('log4js');
@@ -61,7 +61,7 @@ function _debug_ip(msg, socket) {
 
 _debug("---------------------------------------------------------------");
 _debug("main start");
-_debug("Id=$Id: index.js 2014-07-20 01:58:15+09:00 tommie $");
+_debug("Id=$Id: index.js 2014-07-20 02:28:42+09:00 tommie $");
 
 try {
 	server.listen(port, function() {
@@ -155,7 +155,7 @@ io.on('connection', function(socket) {
 				"\n"+
 				"**********************\n"+
 				"暗黒TVへ、ようこそ!\n" +
-				"server=$Id: index.js 2014-07-20 01:58:15+09:00 tommie $\n"+
+				"server=$Id: index.js 2014-07-20 02:28:42+09:00 tommie $\n"+
 				"**********************\n",
 			time    : currentTimeStr()
 		});

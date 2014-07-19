@@ -34,8 +34,7 @@ $(function() {
 		};
 	}
 	function loadedMetaData() {
-		g_loadedMetaData.func && 
-			g_loadedMetaData.func( g_loadedMetaData.data);
+		g_loadedMetaData.func && g_loadedMetaData.func( g_loadedMetaData.data);
 	}
 
 	function init() {
