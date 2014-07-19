@@ -2,14 +2,14 @@
 //	noco-tv client main
 //	by @tommie_nico
 //	this code is based on XXXX
-//	$Id: public/js/main.js 2014-07-20 01:02:18+09:00 tommie $
+//	$Id: public/js/main.js 2014-07-20 03:11:26+09:00 tommie $
 
 $(function() {
 	function log( str) {
 		console.log( str);
 	}
 	log("main start");
-	log("id=$Id: public/js/main.js 2014-07-20 01:02:18+09:00 tommie $");
+	log("id=$Id: public/js/main.js 2014-07-20 03:11:26+09:00 tommie $");
 	var g_message = "";
 	var g_maxMessage = 100;
 	// Initialize varibles
