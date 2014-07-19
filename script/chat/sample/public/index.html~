@@ -30,7 +30,6 @@
 
 <div id="videChat">
 	<video id="Video1" poster="http://tv.tommie2.info/co1827022/image128x128.jpg" preload="none" controls="controls" autoplay="none">
-	<source src="http://tv.tommie2.info/co1827022/watch-1404825242.mp4">
 	<p class="warning">Your browser does not support HTML5 video.</p>
 	</video>
 	<div class="chatArea">
@@ -52,14 +51,18 @@
 
 <br>
 <hr>
-<p>クローム、IEで動作確認しています。</p>
-<p>Safari, FireFoxはまだ対応していません。</p>
+<p>以下のブラウザで動作確認しています。</p>
+Chrome37.0(Win8.1,Linux)<br>
+IE11(Win8.1)<br>
+FireFox(Linux)<br>
+Safariはまだ対応していません。
 <br>
 <hr>
 <div class="footer">
 暗黒TV by <a href="https://twitter.com/tommie_nico">@tommie_nico</a> <a href="http://tommie2.info">Home</a><br>
 <br>
-$Id: index.html 252 2014-07-09 14:23:45Z tommie $<br>
+$Id: public/index.html 2014-07-19 22:52:01+09:00 tommie $<br>
 </div>
 </body>
 </html>
+

@@ -1,5 +1,5 @@
 /*
-** $Id: index.css 138 2014-02-17 16:06:04Z tommie $
+** $Id: index.css 252 2014-07-09 14:23:45Z tommie $
 **
 */
 
@@ -24,36 +24,23 @@ caption {
 	caption-side: left;
 	text-align: left;
 }
-
-table {
-	max-width: 100%;
-	background-color: transparent;
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 th {
 	border: solid 1px;
-	border-color: #ccc;
+	color: black;
 	border-collapse: collapse;
 	/*text-align: left;*/
 	vertical-align:top;
 	/*width: 50px;*/
 }
-tr:nth-child(even) {
-	background-color: white;
-}
-tr:nth-child(odd) {
-	background-color: rgba(0,0,0,0.03);
-}
 td {
 	border: solid 1px;
-	border-color: #ccc;
+	color: black;
 	border-collapse: collapse;
 	text-align: left;
 	vertical-align:top;
-	padding: 8px 8px 8px 8px;
+	/*width: auto;*/
+	padding: 2px 2px 2px 2px;
 }
-
 td:focus {
 	color: red;
 }
@@ -108,13 +95,62 @@ textarea:hover {
  	/*background: url(/img/bg.png);*/
 }
 textarea:focus {
+/****
+	border-color: red; 
 	padding: 0px;
 	border: solid 2px;
-	border-color: red; 
+****/
 	/*background-color: #EEFFEE ;*/
 	/*background-color: gray;*/
  	/*background: url(/img/bg.png);*/
 }
+div.chatArea {
+	float: left;
+	color: black;
+ 	background: url(/img/bg.png);
+	width: 300px;
+}
+
+video#Video1 {
+	float: left;
+	display: block;
+}
+div#chatWindow {
+/*
+ 	background: url(/img/bg.png);
+	color: gray;
+*/
+
+}
+#taMessage {
+	float: left;
+	width: 300px;
+	height: 384px;
+	border: 1px solid black;
+}
+#currentTime {
+	float: left;
+}
+#inputMessage {
+	width: 600px;
+	font-size: 125%;
+	color: black;
+	border: 1px solid black;
+}
+
+#totalUserAll {
+	display: inline;
+	float: left;
+/*  	color: red;
+**/
+}
+
+#totalUser {
+	display: inline;
+	float: left;
+}
+
+
 div.footer {
 	color: gray;
 	padding: 10px;
@@ -123,9 +159,6 @@ div.footer {
 	border-color: gray; 
  	background: url(/img/bg.png);
 
-}
-em {
-	font-weight: 900;
 }
 
 
