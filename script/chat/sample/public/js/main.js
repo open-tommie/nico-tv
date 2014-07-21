@@ -92,8 +92,6 @@ $(function() {
 			log( "on loadedmetadata, video.src="+video.src);
 			log( "video.src="+video.src);
 			log( "video.duration="+video.duration);
-//			video.currentTime = data.time;
-//			video.play();
 			loadedMetaData();
 		}, true);
 
@@ -198,6 +196,7 @@ $(function() {
 	g_socket.on('play', function(data) {
 		try {
 			log("onPlay"+", url="+data.url+", time="+data.time);
+/******************************
 			var video = document.getElementById("Video1");                                               
 			video.src = data.url;
 			video.load(); 
@@ -207,6 +206,7 @@ $(function() {
 				video.currentTime = data.time;
 				video.play();
 			}, data);
+******************************/
 		}
 		catch( e) {
 			log( "ERROR "+e);
